@@ -128,20 +128,6 @@
       "twitterLink": "",
       "linkedinLink": "",
       "id": 7
-    },
-    {
-      "facebookLink": "",
-      "instagramLink": "",
-      "twitterLink": "",
-      "linkedinLink": "",
-      "id": 8
-    },
-    {
-      "facebookLink": "",
-      "instagramLink": "",
-      "twitterLink": "",
-      "linkedinLink": "",
-      "id": 9
     }
   ],
   "Templates": [
@@ -182,6 +168,26 @@
       "id": 4,
       "imageUrl": "https://img.mysignature.io/p/6/5/9/65978094-291c-58bb-953f-3bac04d6fd46.png?time=1592495530",
       "bannerUrl": ""
+    },
+    {
+      "imageUrl": "",
+      "bannerUrl": "",
+      "id": 5
+    },
+    {
+      "imageUrl": "",
+      "bannerUrl": "",
+      "id": 6
+    },
+    {
+      "imageUrl": "",
+      "bannerUrl": "",
+      "id": 7
+    },
+    {
+      "imageUrl": "",
+      "bannerUrl": "",
+      "id": 8
     }
   ]
 }
