@@ -1,0 +1,178 @@
+﻿
+
+
+
+
+    <!--====== PRELOADER PART ENDS ======-->
+    
+    <!--====== HEADER PART START ======-->
+    
+    <header class="header-area">
+        <div class="navbar-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="index.html">
+                                <h1 style="color: #f7f7f7;">CMS</h1>
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent" >
+                                <!-- nav -->
+                                    
+                                <ul id="nav" class="navbar-nav ml-auto">
+                                    <li class="nav-item active">
+                                        <a class="page-scroll" href="#home">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#features">Features</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#about">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" routerLink="/templates">Templates</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" routerLink="/create">Create</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#blog">Blog</a>
+                                    </li>
+                                </ul>
+                            </div> <!-- navbar collapse -->
+                            
+                            <!-- <div class="navbar-btn d-none d-sm-inline-block">
+                                <a class="main-btn" data-scroll-nav="0" href="#pricing">Free Trial</a>
+                            </div> -->
+                        </nav> <!-- navbar -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- navbar area -->
+        
+        <div id="home" class="header-hero bg_cover" style="background-image: url(../../assets/images/banner-bg.svg)">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="header-hero-content text-center">
+                           
+                            <h1 *ngIf="isAddMode">Add User</h1>
+<h1 *ngIf="!isAddMode">Edit User</h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+        <div class="form-group col">
+            <label for="firstName">First Name</label>
+            <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+            <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                <div *ngIf="f.firstName.errors.required">First Name is required</div>
+            </div>
+        </div>
+        <div class="form-group col">
+            <label for="lastName">Last Name</label>
+            <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+            <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col">
+            <label for="email">Email</label>
+            <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">Email is required</div>
+            </div>
+        </div>
+        <div class="form-group col">
+            <label for="password">
+                Password
+                <em *ngIf="!isAddMode">(Leave blank to keep the same password)</em>
+            </label>
+            <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">Password is required</div>
+                <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button [disabled]="loading" class="btn btn-primary">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Save
+        </button>
+        <a routerLink="/users" class="btn btn-link">Cancel</a>
+    </div>
+</form>
+                        </div> <!-- header hero content -->
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="header-hero-content text-center">
+                        <div class="header-hero-image text-center wow fadeIn" data-wow-duration="1.3s" data-wow-delay="1.4s">
+                          <img src="https://cms-assets.tutsplus.com/uploads/users/988/posts/35106/image/envato%20email%20sig%20search%20A.png" alt="hero">
+                          <img src="https://media.istockphoto.com/photos/digital-writing-and-drawing-with-stylus-pen-on-tablet-pc-picture-id174948904?b=1&k=6&m=174948904&s=170667a&w=0&h=B3VfDI-HzJdFGfe7yn_3EFlHjPkh3reU4An2MoXGfF8=" alt="">
+                      </div>
+                      </div> <!-- header hero content -->
+                  </div>
+                </div> <!-- row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="header-hero-image text-center wow fadeIn" data-wow-duration="1.3s" data-wow-delay="1.4s">
+                            <img src="../../assets/images/header-hero.png" alt="hero">
+                        </div> <!-- header hero image -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+            <div id="particles-1" class="particles"></div>
+        </div> <!-- header hero -->
+    </header>
+    
+    <!--====== HEADER PART ENDS ======-->
+    
+  
+    <!--====== PART ENDS ======-->
+   
+
+
+    <!--====== Jquery js ======-->
+    <script src="../../assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="../../assets/js/vendor/modernizr-3.7.1.min.js"></script>
+    
+    <!--====== Bootstrap js ======-->
+    <script src="../../assets/js/popper.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    
+    <!--====== Plugins js ======-->
+    <script src="../../assets/js/plugins.js"></script>
+    
+    <!--====== Slick js ======-->
+    <script src="../../assets/js/slick.min.js"></script>
+    
+    <!--====== Ajax Contact js ======-->
+    <script src="../../assets/js/ajax-contact.js"></script>
+    
+    <!--====== Counter Up js ======-->
+    <script src="../../assets/js/waypoints.min.js"></script>
+    <script src="../../assets/js/jquery.counterup.min.js"></script>
+    
+    <!--====== Magnific Popup js ======-->
+    <script src="../../assets/js/jquery.magnific-popup.min.js"></script>
+    
+    <!--====== Scrolling Nav js ======-->
+    <script src="../../assets/js/jquery.easing.min.js"></script>
+    <script src="../../assets/js/scrolling-nav.js"></script>
+    
+    <!--====== wow js ======-->
+    <script src="../../assets/js/wow.min.js"></script>
+    
+    <!--====== Particles js ======-->
+    <script src="../../assets/js/particles.min.js"></script>
+    
+    <!--====== Main js ======-->
+    <script src="../../assets/js/main.js"></script>
+    

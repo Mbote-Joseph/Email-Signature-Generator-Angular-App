@@ -1,0 +1,188 @@
+{
+  "Users": [
+    {
+      "id": 1,
+      "name": "Tony Star",
+      "company": "CMSHosting",
+      "position": "Angular",
+      "department": "Email Signature",
+      "phone": "0704031617",
+      "mobile": "0792622515",
+      "website": "mbote.netlify.com",
+      "skype": "jose.xyz",
+      "email": "Mwangi.John@gmail.com",
+      "address": "136 south Kinangop"
+    },
+    {
+      "id": 2,
+      "name": "Tony Star",
+      "company": "CMSHosting",
+      "position": "Angular",
+      "department": "Email Signature",
+      "phone": "0704031617",
+      "mobile": "0792622515",
+      "website": "mbote.netlify.com",
+      "skype": "jose.xyz",
+      "email": "Mwangi.John@gmail.com",
+      "address": "136 south Kinangop"
+    },
+    {
+      "id": 3,
+      "name": "Tony Star",
+      "company": "CMSHosting",
+      "position": "Angular",
+      "department": "Email Signature",
+      "phone": "0704031617",
+      "mobile": "0792622515",
+      "website": "mbote.netlify.com",
+      "skype": "jose.xyz",
+      "email": "Mwangi.John@gmail.com",
+      "address": "136 south Kinangop"
+    },
+    {
+      "id": 4,
+      "name": "Tony Star",
+      "company": "CMSHosting",
+      "position": "Angular",
+      "department": "Email Signature",
+      "phone": "0704031617",
+      "mobile": "0792622515",
+      "website": "mbote.netlify.com",
+      "skype": "jose.xyz",
+      "email": "Mwangi.John@gmail.com",
+      "address": "136 south Kinangop"
+    },
+    {
+      "name": "Matthew Murphy",
+      "company": "",
+      "position": "",
+      "department": "",
+      "phone": "",
+      "mobile": "",
+      "website": "",
+      "skype": "",
+      "email": "",
+      "address": "",
+      "id": 5
+    },
+    {
+      "name": "Matthew Murphy",
+      "company": "",
+      "position": "",
+      "department": "",
+      "phone": "",
+      "mobile": "",
+      "website": "",
+      "skype": "",
+      "email": "",
+      "address": "",
+      "id": 6
+    }
+  ],
+  "Social": [
+    {
+      "id": 1,
+      "facebookLink": "hbkhkendfoor",
+      "instagramLink": "bhhfirkejgvn;",
+      "twitterLink": "uohnfri",
+      "linkedinLink": "bhinjkfbiv"
+    },
+    {
+      "id": 2,
+      "facebookLink": "hbkhkendfoor",
+      "instagramLink": "bhhfirkejgvn;",
+      "twitterLink": "uohnfri",
+      "linkedinLink": "bhinjkfbiv"
+    },
+    {
+      "id": 3,
+      "facebookLink": "hbkhkendfoor",
+      "instagramLink": "bhhfirkejgvn;",
+      "twitterLink": "uohnfri",
+      "linkedinLink": "bhinjkfbiv"
+    },
+    {
+      "id": 4,
+      "facebookLink": "hbkhkendfoor",
+      "instagramLink": "bhhfirkejgvn;",
+      "twitterLink": "uohnfri",
+      "linkedinLink": "bhinjkfbiv"
+    },
+    {
+      "facebookLink": "",
+      "instagramLink": "",
+      "twitterLink": "",
+      "linkedinLink": "",
+      "id": 5
+    },
+    {
+      "facebookLink": "",
+      "instagramLink": "",
+      "twitterLink": "",
+      "linkedinLink": "",
+      "id": 6
+    },
+    {
+      "facebookLink": "",
+      "instagramLink": "",
+      "twitterLink": "",
+      "linkedinLink": "",
+      "id": 7
+    }
+  ],
+  "Templates": [
+    {
+      "id": 1,
+      "template": ""
+    },
+    {
+      "id": 2,
+      "template": ""
+    },
+    {
+      "id": 3,
+      "template": ""
+    },
+    {
+      "id": 4,
+      "template": ""
+    }
+  ],
+  "Images": [
+    {
+      "id": 1,
+      "imageUrl": "https://img.mysignature.io/p/6/5/9/65978094-291c-58bb-953f-3bac04d6fd46.png?time=1592495530",
+      "bannerUrl": ""
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://img.mysignature.io/p/6/5/9/65978094-291c-58bb-953f-3bac04d6fd46.png?time=1592495530",
+      "bannerUrl": ""
+    },
+    {
+      "id": 3,
+      "imageUrl": "https://img.mysignature.io/p/6/5/9/65978094-291c-58bb-953f-3bac04d6fd46.png?time=1592495530",
+      "bannerUrl": ""
+    },
+    {
+      "id": 4,
+      "imageUrl": "https://img.mysignature.io/p/6/5/9/65978094-291c-58bb-953f-3bac04d6fd46.png?time=1592495530",
+      "bannerUrl": ""
+    },
+    {
+      "imageUrl": "",
+      "bannerUrl": "",
+      "id": 5
+    },
+    {
+      "imageUrl": "",
+      "bannerUrl": "",
+      "id": 6
+    },
+    {
+      "imageUrl": "",
+      "bannerUrl": "",
+      "id": 7
+    }
+  ]
+}
