@@ -55,7 +55,7 @@
                 </li>
                 <li class="nav-item">
                   <a class="page-scroll" href="#team" style="size: 25px"
-                    >Hi !</a
+                    >Hi {{ user.firstName }}!</a
                   >
                 </li>
                 <!-- <li class="nav-item">
@@ -106,7 +106,7 @@
                             type="text"
                             id="name"
                             class="form-control"
-                            [(ngModel)]="name"
+                            [(ngModel)]="userDetails.name"
                             name="name"
                           />
                         </div>
@@ -119,7 +119,7 @@
                             type="text"
                             id="company"
                             class="form-control"
-                            [(ngModel)]="company"
+                            [(ngModel)]="userDetails.company"
                             name="company"
                           />
                         </div>
@@ -131,7 +131,7 @@
                             type="text"
                             id="position"
                             class="form-control"
-                            [(ngModel)]="position"
+                            [(ngModel)]="userDetails.position"
                             name="position"
                           />
                         </div>
@@ -143,7 +143,7 @@
                             type="text"
                             id="department"
                             class="form-control"
-                            [(ngModel)]="department"
+                            [(ngModel)]="userDetails.department"
                             name="department"
                           />
                         </div>
@@ -155,7 +155,7 @@
                             type="text"
                             id="phone"
                             class="form-control"
-                            [(ngModel)]="phone"
+                            [(ngModel)]="userDetails.phone"
                             name="phone"
                           />
                         </div>
@@ -167,7 +167,7 @@
                             type="text"
                             id="mobile"
                             class="form-control"
-                            [(ngModel)]="mobile"
+                            [(ngModel)]="userDetails.mobile"
                             name="mobile"
                           />
                         </div>
@@ -179,7 +179,7 @@
                             type="text"
                             id="website"
                             class="form-control"
-                            [(ngModel)]="website"
+                            [(ngModel)]="userDetails.website"
                             name="website"
                           />
                         </div>
@@ -191,7 +191,7 @@
                             type="text"
                             id="skype"
                             class="form-control"
-                            [(ngModel)]="skype"
+                            [(ngModel)]="userDetails.skype"
                             name="skype"
                           />
                         </div>
@@ -203,7 +203,7 @@
                             type="text"
                             id="email"
                             class="form-control"
-                            [(ngModel)]="email"
+                            [(ngModel)]="userDetails.email"
                             name="email"
                           />
                         </div>
@@ -215,7 +215,7 @@
                             type="text"
                             id="address"
                             class="form-control"
-                            [(ngModel)]="address"
+                            [(ngModel)]="userDetails.address"
                             name="address"
                           />
                         </div>
@@ -243,7 +243,7 @@
                             type="text"
                             id="imageUrl"
                             class="form-control"
-                            [(ngModel)]="imageUrl"
+                            [(ngModel)]="imageDetails.imageUrl"
                             name="imageUrl"
                           />
                         </div>
@@ -256,7 +256,7 @@
                             type="text"
                             id="bannerUrl"
                             class="form-control"
-                            [(ngModel)]="bannerUrl"
+                            [(ngModel)]="imageDetails.bannerUrl"
                             name="bannerUrl"
                           />
                         </div>
@@ -286,7 +286,7 @@
                             type="text"
                             id="facebookLink"
                             class="form-control"
-                            [(ngModel)]="facebookLink"
+                            [(ngModel)]="socialDetails.facebookLink"
                             name="facebookLink"
                           />
                         </div>
@@ -303,7 +303,7 @@
                             type="text"
                             id="instagramLink"
                             class="form-control"
-                            [(ngModel)]="instagramLink"
+                            [(ngModel)]="socialDetails.instagramLink"
                             name="instagramLink"
                           />
                         </div>
@@ -318,7 +318,7 @@
                             type="text"
                             id="twitterLink"
                             class="form-control"
-                            [(ngModel)]="twitterLink"
+                            [(ngModel)]="socialDetails.twitterLink"
                             name="twitterLink"
                           />
                         </div>
@@ -336,7 +336,7 @@
                             type="text"
                             id="linkedinLink"
                             class="form-control"
-                            [(ngModel)]="linkedinLink"
+                            [(ngModel)]="socialDetails.linkedinLink"
                             name="linkedinLink"
                           />
                         </div>
@@ -408,7 +408,7 @@
                             <tr>
                               <td width="35%">
                                 <img
-                                  [src]="imageUrl"
+                                  [src]="imageDetails.imageUrl"
                                   style="
                                     max-width: 100%;
                                     border: 1px solid #ffffff;
@@ -436,7 +436,7 @@
                                           "
                                         >
                                           <!-- Matthew Murphy  -->
-                                          {{ name }}
+                                          {{ userDetails.name }}
                                           <!-- {{user.name | uppercase}} -->
                                         </span>
                                       </td>
@@ -452,7 +452,7 @@
                                           aria-placeholder="Founder"
                                         >
                                           <!-- Founder  -->
-                                          {{ position }}
+                                          {{ userDetails.position }}
                                           <!-- {{user.position}} -->
                                         </span>
                                         <span>
@@ -472,7 +472,7 @@
                                             "
                                           >
                                             <!-- CMS Hosting LLC -->
-                                            {{ company }}
+                                            {{ userDetails.company }}
                                             <!-- {{user.company}} -->
                                           </span>
                                         </span>
@@ -513,7 +513,7 @@
                                                 "
                                               >
                                                 <!-- cmshosting.xyz -->
-                                                {{ website }}
+                                                {{ userDetails.website }}
                                                 <!-- {{user.website}} -->
                                               </a>
                                             </td>
@@ -541,7 +541,7 @@
                                                 "
                                               >
                                                 <!-- mmurphy@cmshosting.xyz -->
-                                                {{ email }}
+                                                {{ userDetails.email }}
                                                 <!-- {{user.email}} -->
                                               </a>
                                             </td>
@@ -566,7 +566,7 @@
                                                 "
                                               >
                                                 <!-- 833-CMS -->
-                                                {{ phone }}
+                                                {{ userDetails.phone }}
                                                 <!-- {{user.phone}} -->
                                               </span>
                                             </td>
@@ -591,7 +591,7 @@
                                                 "
                                               >
                                                 <!-- 209-898-6435 -->
-                                                {{ mobile }}
+                                                {{ userDetails.mobile }}
                                                 <!-- {{user.mobile}} -->
                                               </span>
                                             </td>
@@ -616,7 +616,7 @@
                                                 "
                                               >
                                                 <!-- 1334 S Center , CA 95206 -->
-                                                {{ address }}
+                                                {{ userDetails.address }}
                                                 <!-- {{user.address}} -->
                                               </span>
                                             </td>
@@ -809,7 +809,7 @@
                                           "
                                         >
                                           <!-- Matthew Murphy  -->
-                                          {{ name }}
+                                          {{ userDetails.name }}
                                           <!-- {{user.name | uppercase}} -->
                                         </span>
                                       </td>
@@ -824,7 +824,7 @@
                                           "
                                         >
                                           <!-- Founder  -->
-                                          {{ position }}
+                                          {{ userDetails.position }}
                                           <!-- {{user.position}} -->
                                         </span>
                                         <span>
@@ -844,7 +844,7 @@
                                             "
                                           >
                                             <!-- CMS Hosting LLC -->
-                                            {{ company }}
+                                            {{ userDetails.company }}
                                             <!-- {{user.company}} -->
                                           </span>
                                         </span>
@@ -885,7 +885,7 @@
                                                 "
                                               >
                                                 <!-- cmshosting.xyz -->
-                                                {{ website }}
+                                                {{ userDetails.website }}
                                                 <!-- {{user.website}} -->
                                               </a>
                                             </td>
@@ -913,7 +913,7 @@
                                                 "
                                               >
                                                 <!-- mmurphy@cmshosting.xyz -->
-                                                {{ email }}
+                                                {{ userDetails.email }}
                                                 <!-- {{user.email}} -->
                                               </a>
                                             </td>
@@ -938,7 +938,7 @@
                                                 "
                                               >
                                                 <!-- 833-CMS -->
-                                                {{ phone }}
+                                                {{ userDetails.phone }}
                                                 <!-- {{user.phone}} -->
                                               </span>
                                             </td>
@@ -964,7 +964,7 @@
                                                 "
                                               >
                                                 <!-- 209-898-6435 -->
-                                                {{ mobile }}
+                                                {{ userDetails.mobile }}
                                                 <!-- {{user.mobile}} -->
                                               </span>
                                             </td>
@@ -989,7 +989,7 @@
                                                 "
                                               >
                                                 <!-- 1334 S Center , CA 95206 -->
-                                                {{ address }}
+                                                {{ userDetails.address }}
                                                 <!-- {{user.address}} -->
                                               </span>
                                             </td>
@@ -1002,7 +1002,7 @@
                               </td>
                               <td width="35%">
                                 <img
-                                  [src]="imageUrl"
+                                  [src]="imageDetails.imageUrl"
                                   style="
                                     max-width: 100%;
                                     border: 1px solid #ffffff;
@@ -1090,7 +1090,7 @@
                       </div>
                       <td style="height: 50px; width: 300px">
                         <img
-                          [src]="bannerUrl"
+                          [src]="imageDetails.bannerUrl"
                           style="max-width: 100%; border: 1px solid #ffffff"
                         />
                       </td>
@@ -1169,7 +1169,7 @@
                         >
                           <td width="35%">
                             <img
-                              [src]="imageUrl"
+                              [src]="imageDetails.imageUrl"
                               style="max-width: 35%; border: 1px solid #ffffff"
                             />
                           </td>
@@ -1196,7 +1196,7 @@
                                           "
                                         >
                                           <!-- Matthew Murphy  -->
-                                          {{ name }}
+                                          {{ userDetails.name }}
                                           <!-- {{user.name | uppercase}} -->
                                         </span>
                                       </td>
@@ -1211,7 +1211,7 @@
                                           "
                                         >
                                           <!-- Founder  -->
-                                          {{ position }}
+                                          {{ userDetails.position }}
                                           <!-- {{user.position}} -->
                                         </span>
                                         <span>
@@ -1231,7 +1231,7 @@
                                             "
                                           >
                                             <!-- CMS Hosting LLC -->
-                                            {{ company }}
+                                            {{ userDetails.company }}
                                             <!-- {{user.company}} -->
                                           </span>
                                         </span>
@@ -1272,7 +1272,7 @@
                                                 "
                                               >
                                                 <!-- cmshosting.xyz -->
-                                                {{ website }}
+                                                {{ userDetails.website }}
                                                 <!-- {{user.website}} -->
                                               </a>
                                             </td>
@@ -1300,7 +1300,7 @@
                                                 "
                                               >
                                                 <!-- mmurphy@cmshosting.xyz -->
-                                                {{ email }}
+                                                {{ userDetails.email }}
                                                 <!-- {{user.email}} -->
                                               </a>
                                             </td>
@@ -1325,7 +1325,7 @@
                                                 "
                                               >
                                                 <!-- 833-CMS -->
-                                                {{ phone }}
+                                                {{ userDetails.phone }}
                                                 <!-- {{user.phone}} -->
                                               </span>
                                             </td>
@@ -1350,7 +1350,7 @@
                                                 "
                                               >
                                                 <!-- 209-898-6435 -->
-                                                {{ mobile }}
+                                                {{ userDetails.mobile }}
                                                 <!-- {{user.mobile}} -->
                                               </span>
                                             </td>
@@ -1375,7 +1375,7 @@
                                                 "
                                               >
                                                 <!-- 1334 S Center , CA 95206 -->
-                                                {{ address }}
+                                                {{ userDetails.address }}
                                                 <!-- {{user.address}} -->
                                               </span>
                                             </td>
@@ -1564,10 +1564,10 @@
                                   font-family: Verdana;
                                 "
                               >
-                                {{ name }}
+                                {{ userDetails.name }}
                               </p>
-                              <p>{{ position }}</p>
-                              <p>{{ company }}</p>
+                              <p>{{ userDetails.position }}</p>
+                              <p>{{ userDetails.company }}</p>
                               <a
                                 href="facebookLink"
                                 style="
@@ -1642,7 +1642,7 @@
                                     "
                                     >E:</span
                                   >
-                                  {{ email }}
+                                  {{ userDetails.email }}
                                 </p>
                                 <p id="website">
                                   <span
@@ -1653,7 +1653,7 @@
                                     "
                                     >W:</span
                                   >
-                                  {{ website }}
+                                  {{ userDetails.website }}
                                 </p>
                                 <p id="phone">
                                   <span
@@ -1664,7 +1664,7 @@
                                     "
                                     >P:</span
                                   >
-                                  {{ phone }}
+                                  {{ userDetails.phone }}
                                 </p>
                                 <p></p>
                                 <p id="mobile">
@@ -1676,7 +1676,7 @@
                                     "
                                     >M :</span
                                   >
-                                  {{ mobile }}
+                                  {{ userDetails.mobile }}
                                 </p>
                               </div>
                             </td>
@@ -1757,7 +1757,7 @@
                     <div id="htmlcode4">
                       <div style="text-align: center; width: 300px">
                         <a href="https://tnp1606.github.io/" target="_blank">
-                          <img [src]="imageUrl" width="80"
+                          <img [src]="imageDetails.imageUrl" width="80"
                         /></a>
                       </div>
 
@@ -1794,7 +1794,7 @@
                                   text-align: center;
                                 "
                               >
-                                {{ name }}
+                                {{ userDetails.name }}
                               </p>
                               <div
                                 style="
@@ -1804,13 +1804,18 @@
                                 "
                               >
                                 <p id="position">
-                                  {{ position }} | {{ company }}
+                                  {{ userDetails.position }} |
+                                  {{ userDetails.company }}
                                 </p>
-                                <p id="phone">Phone: {{ phone }}</p>
+                                <p id="phone">Phone: {{ userDetails.phone }}</p>
                                 <p></p>
-                                <p id="mobile">Mobile: {{ mobile }}</p>
-                                <p id="website">Website: {{ website }}</p>
-                                <p id="email">Email: {{ email }}</p>
+                                <p id="mobile">
+                                  Mobile: {{ userDetails.mobile }}
+                                </p>
+                                <p id="website">
+                                  Website: {{ userDetails.website }}
+                                </p>
+                                <p id="email">Email: {{ userDetails.email }}</p>
 
                                 <a
                                   href="facebookLink"
@@ -1981,7 +1986,7 @@
                                 target="_blank"
                               >
                                 <img
-                                  [src]="imageUrl"
+                                  [src]="imageDetails.imageUrl"
                                   width="80"
                                   style="margin-left: auto"
                               /></a>
@@ -2061,18 +2066,25 @@
                                   font-family: Verdana;
                                 "
                               >
-                                {{ name }}
+                                {{ userDetails.name }}
                               </p>
-                              <p>{{ position }} | {{ company }}</p>
+                              <p>
+                                {{ userDetails.position }} |
+                                {{ userDetails.company }}
+                              </p>
 
                               <div
                                 style="font-family: Verdana; font-size: 15px"
                               >
-                                <p id="email">Email: {{ email }}</p>
-                                <p id="website">Website: {{ website }}</p>
-                                <p id="phone">Phone: {{ phone }}</p>
+                                <p id="email">Email: {{ userDetails.email }}</p>
+                                <p id="website">
+                                  Website: {{ userDetails.website }}
+                                </p>
+                                <p id="phone">Phone: {{ userDetails.phone }}</p>
                                 <p></p>
-                                <p id="mobile">Mobile: {{ mobile }}</p>
+                                <p id="mobile">
+                                  Mobile: {{ userDetails.mobile }}
+                                </p>
                               </div>
                             </td>
                           </tr>
@@ -2175,7 +2187,7 @@
                                   target="_blank"
                                 >
                                   <img
-                                    [src]="imageUrl"
+                                    [src]="imageDetails.imageUrl"
                                     width="100"
                                     style="margin-left: auto"
                                 /></a>
@@ -2196,18 +2208,25 @@
                                   font-family: Verdana;
                                 "
                               >
-                                {{ name }}
+                                {{ userDetails.name }}
                               </p>
-                              <p>{{ position }} | {{ company }}</p>
+                              <p>
+                                {{ userDetails.position }} |
+                                {{ userDetails.company }}
+                              </p>
 
                               <div
                                 style="font-family: Verdana; font-size: 15px"
                               >
-                                <p id="email">Email:{{ email }}</p>
-                                <p id="website">Website: {{ website }}</p>
-                                <p id="phone">Phone: {{ phone }}</p>
+                                <p id="email">Email:{{ userDetails.email }}</p>
+                                <p id="website">
+                                  Website: {{ userDetails.website }}
+                                </p>
+                                <p id="phone">Phone: {{ userDetails.phone }}</p>
                                 <p></p>
-                                <p id="mobile">Mobile: {{ mobile }}</p>
+                                <p id="mobile">
+                                  Mobile: {{ userDetails.mobile }}
+                                </p>
                               </div>
                               <p>Follow us:</p>
                               <a
@@ -2369,7 +2388,7 @@
                                 target="_blank"
                               >
                                 <img
-                                  [src]="imageUrl"
+                                  [src]="imageDetails.imageUrl"
                                   width="100"
                                   style="margin-left: auto"
                               /></a>
@@ -2383,10 +2402,10 @@
                                   font-family: Verdana;
                                 "
                               >
-                                {{ name }}
+                                {{ userDetails.name }}
                               </p>
-                              <p>{{ position }}</p>
-                              <p>{{ company }}</p>
+                              <p>{{ userDetails.position }}</p>
+                              <p>{{ userDetails.company }}</p>
                             </td>
                             <td
                               width="200"
@@ -2396,12 +2415,12 @@
                               <div
                                 style="font-family: Verdana; font-size: 15px"
                               >
-                                <p id="email">{{ email }}</p>
-                                <p id="website">{{ website }}</p>
-                                <p id="phone">{{ phone }}</p>
+                                <p id="email">{{ userDetails.email }}</p>
+                                <p id="website">{{ userDetails.website }}</p>
+                                <p id="phone">{{ userDetails.phone }}</p>
                                 <p></p>
-                                <p id="mobile">{{ mobile }}</p>
-                                <p id="address">{{ address }}</p>
+                                <p id="mobile">{{ userDetails.mobile }}</p>
+                                <p id="address">{{ userDetails.address }}</p>
                               </div>
                             </td>
                           </tr>
@@ -2567,7 +2586,7 @@
                                 target="_blank"
                               >
                                 <img
-                                  [src]="imageUrl"
+                                  [src]="imageDetails.imageUrl"
                                   width="80"
                                   style="margin-left: auto"
                               /></a>
@@ -2581,21 +2600,21 @@
                                   font-family: Verdana;
                                 "
                               >
-                                {{ name }}
+                                {{ userDetails.name }}
                               </p>
-                              <p>{{ position }}</p>
-                              <p>{{ company }}</p>
+                              <p>{{ userDetails.position }}</p>
+                              <p>{{ userDetails.company }}</p>
                             </td>
                             <td width="200" rowspan="2">
                               <div
                                 style="font-family: Verdana; font-size: 15px"
                               >
-                                <p id="email">{{ email }}</p>
-                                <p id="website">{{ website }}</p>
-                                <p id="phone">{{ phone }}</p>
+                                <p id="email">{{ userDetails.email }}</p>
+                                <p id="website">{{ userDetails.website }}</p>
+                                <p id="phone">{{ userDetails.phone }}</p>
                                 <p></p>
-                                <p id="mobile">{{ mobile }}</p>
-                                <p id="address">{{ address }}</p>
+                                <p id="mobile">{{ userDetails.mobile }}</p>
+                                <p id="address">{{ userDetails.address }}</p>
                               </div>
                               <p>Follow us:</p>
                               <a
@@ -2737,7 +2756,7 @@
                     <div id="htmlcode9">
                       <a href="https://tnp1606.github.io/" target="_blank">
                         <img
-                          [src]="imageUrl"
+                          [src]="imageDetails.imageUrl"
                           width="80"
                           style="margin-left: 5px"
                       /></a>
@@ -2774,18 +2793,18 @@
                                   font-family: Verdana;
                                 "
                               >
-                                {{ name }}
+                                {{ userDetails.name }}
                               </p>
                               <div
                                 style="font-family: Verdana; font-size: 15px"
                               >
-                                <p id="position">{{ position }}</p>
-                                <p id="company">{{ company }}</p>
-                                <p id="email">{{ email }}</p>
-                                <p id="website">{{ website }}</p>
-                                <p id="phone">{{ phone }}</p>
+                                <p id="position">{{ userDetails.position }}</p>
+                                <p id="company">{{ userDetails.company }}</p>
+                                <p id="email">{{ userDetails.email }}</p>
+                                <p id="website">{{ userDetails.website }}</p>
+                                <p id="phone">{{ userDetails.phone }}</p>
                                 <p></p>
-                                <p id="mobile">{{ mobile }}</p>
+                                <p id="mobile">{{ userDetails.mobile }}</p>
                               </div>
                             </td>
                           </tr>
@@ -2949,7 +2968,7 @@
                                 target="_blank"
                               >
                                 <img
-                                  [src]="imageUrl"
+                                  [src]="imageDetails.imageUrl"
                                   width="80"
                                   style="margin-left: auto"
                               /></a>
@@ -2969,19 +2988,19 @@
                                   font-family: Verdana;
                                 "
                               >
-                                {{ name }}
+                                {{ userDetails.name }}
                               </p>
                               <div
                                 style="font-family: Verdana; font-size: 15px"
                               >
-                                <p id="position">{{ position }}</p>
-                                <p id="company">{{ company }}</p>
-                                <p id="email">{{ email }}</p>
-                                <p id="website">{{ website }}</p>
-                                <p id="phone">{{ phone }}</p>
+                                <p id="position">{{ userDetails.position }}</p>
+                                <p id="company">{{ userDetails.company }}</p>
+                                <p id="email">{{ userDetails.email }}</p>
+                                <p id="website">{{ userDetails.website }}</p>
+                                <p id="phone">{{ userDetails.phone }}</p>
                                 <p></p>
-                                <p id="mobile">{{ mobile }}</p>
-                                <p id="address">{{ address }}</p>
+                                <p id="mobile">{{ userDetails.mobile }}</p>
+                                <p id="address">{{ userDetails.address }}</p>
                               </div>
                             </td>
                           </tr>

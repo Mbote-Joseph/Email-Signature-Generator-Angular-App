@@ -51,32 +51,6 @@
       "skype": "jose.xyz",
       "email": "Mwangi.John@gmail.com",
       "address": "136 south Kinangop"
-    },
-    {
-      "name": "Matthew Murphy",
-      "company": "",
-      "position": "",
-      "department": "",
-      "phone": "",
-      "mobile": "",
-      "website": "",
-      "skype": "",
-      "email": "",
-      "address": "",
-      "id": 5
-    },
-    {
-      "name": "Matthew Murphy",
-      "company": "",
-      "position": "",
-      "department": "",
-      "phone": "",
-      "mobile": "",
-      "website": "",
-      "skype": "",
-      "email": "",
-      "address": "",
-      "id": 6
     }
   ],
   "Social": [
@@ -107,41 +81,6 @@
       "instagramLink": "bhhfirkejgvn;",
       "twitterLink": "uohnfri",
       "linkedinLink": "bhinjkfbiv"
-    },
-    {
-      "facebookLink": "",
-      "instagramLink": "",
-      "twitterLink": "",
-      "linkedinLink": "",
-      "id": 5
-    },
-    {
-      "facebookLink": "",
-      "instagramLink": "",
-      "twitterLink": "",
-      "linkedinLink": "",
-      "id": 6
-    },
-    {
-      "facebookLink": "",
-      "instagramLink": "",
-      "twitterLink": "",
-      "linkedinLink": "",
-      "id": 7
-    },
-    {
-      "facebookLink": "",
-      "instagramLink": "",
-      "twitterLink": "",
-      "linkedinLink": "",
-      "id": 8
-    },
-    {
-      "facebookLink": "",
-      "instagramLink": "",
-      "twitterLink": "",
-      "linkedinLink": "",
-      "id": 9
     }
   ],
   "Templates": [

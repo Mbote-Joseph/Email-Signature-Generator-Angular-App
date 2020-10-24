@@ -40,7 +40,8 @@ export class CreateComponent implements OnInit {
     //To be added
   };
   @Input() imageDetails = {
-    imageUrl: '',
+    imageUrl:
+      'https://img.mysignature.io/p/6/5/9/65978094-291c-58bb-953f-3bac04d6fd46.png?time=1592495530',
     bannerUrl: '',
   };
   @ViewChild('form') generalForm: NgForm;
