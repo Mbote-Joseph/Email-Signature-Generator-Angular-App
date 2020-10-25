@@ -1,7 +1,7 @@
 .example-card {
   // margin-left: 2%;
   // margin-top: 2%;
-  max-width: 450px;
+  max-width: 500px;
 }
 
 section {
@@ -99,8 +99,9 @@ body {
 }
 .viewport {
   height: 900px;
-  width: 90%;
+  width: 100%;
   background: #ffffff;
   // margin: 2em;
   box-shadow: #ffffff;
+  border-radius: 2%;
 }
