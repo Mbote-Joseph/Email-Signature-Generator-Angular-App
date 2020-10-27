@@ -9,32 +9,57 @@ import { retry, catchError } from 'rxjs/operators';
 })
 export class ImagesService {
   // Define API
-  apiURL = 'http://localhost:3000';
-
+  apiURL = 'http://emailsignaturegen.herokuapp.com/v1';
+  token;
   constructor(private http: HttpClient) {}
 
   /*========================================
     CRUD Methods for consuming RESTful API
   =========================================*/
+  public getAuthToken() {
+    // use admin credentials shared with you in the channel
+    // NOTE: DO NOT include this part during commits. Store
+    // the values in an untracked file then reference them here.
+    var credentials = {
+      username: 'test@cmshosting.xyz',
+      password: 'cmshosting.xyz',
+    };
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+      }),
+    };
+
+    this.token = this.http
+      .post(`${this.apiURL}/tokens`, credentials, httpOptions)
+      .subscribe((data) => {
+        // console.log(data['access_token']);
+        this.token = data['access_token'];
+      });
+
+    return this.token;
+  }
 
   // Http Options
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
+      Authorization: `Bearer ${this.token}`,
     }),
   };
 
   // HttpClient API get() method => Fetch Images list
   getImages(): Observable<Images> {
     return this.http
-      .get<Images>(this.apiURL + '/Images')
+      .get<Images>(this.apiURL + '/users/{id}/images')
       .pipe(retry(1), catchError(this.handleError));
   }
 
   // HttpClient API get() method => Fetch Images
   getImage(id): Observable<Images> {
     return this.http
-      .get<Images>(this.apiURL + '/Images/' + id)
+      .get<Images>(this.apiURL + '/users/{id}/images/' + id)
       .pipe(retry(1), catchError(this.handleError));
   }
 
@@ -42,7 +67,7 @@ export class ImagesService {
   createImages(Images): Observable<Images> {
     return this.http
       .post<Images>(
-        this.apiURL + '/Images',
+        this.apiURL + '/users/{id}/images',
         JSON.stringify(Images),
         this.httpOptions
       )
@@ -53,7 +78,7 @@ export class ImagesService {
   updateImages(id, Images): Observable<Images> {
     return this.http
       .put<Images>(
-        this.apiURL + '/Images/' + id,
+        this.apiURL + '/users/{id}/images/' + id,
         JSON.stringify(Images),
         this.httpOptions
       )
@@ -63,7 +88,10 @@ export class ImagesService {
   // HttpClient API delete() method => Delete Images
   deleteImages(id) {
     return this.http
-      .delete<Images>(this.apiURL + '/Images/' + id, this.httpOptions)
+      .delete<Images>(
+        this.apiURL + '/users/{id}/images/' + id,
+        this.httpOptions
+      )
       .pipe(retry(1), catchError(this.handleError));
   }
 

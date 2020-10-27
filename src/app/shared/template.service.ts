@@ -9,7 +9,7 @@ import { retry, catchError } from 'rxjs/operators';
 })
 export class TemplateService {
   // Define API
-  apiURL = 'http://localhost:3000';
+  apiURL = 'http://emailsignaturegen.herokuapp.com/v1';
 
   constructor(private http: HttpClient) {}
 
@@ -27,14 +27,14 @@ export class TemplateService {
   // HttpClient API get() method => Fetch Templates list
   getTemplates(): Observable<Templates> {
     return this.http
-      .get<Templates>(this.apiURL + '/Templates')
+      .get<Templates>(this.apiURL + '/templates')
       .pipe(retry(1), catchError(this.handleError));
   }
 
   // HttpClient API get() method => Fetch Templates
   getTemplate(id): Observable<Templates> {
     return this.http
-      .get<Templates>(this.apiURL + '/Templates/' + id)
+      .get<Templates>(this.apiURL + '/templates/' + id)
       .pipe(retry(1), catchError(this.handleError));
   }
 
@@ -42,7 +42,7 @@ export class TemplateService {
   createTemplates(Templates): Observable<Templates> {
     return this.http
       .post<Templates>(
-        this.apiURL + '/Templatess',
+        this.apiURL + '/templates',
         JSON.stringify(Templates),
         this.httpOptions
       )
@@ -53,7 +53,7 @@ export class TemplateService {
   updateTemplates(id, Templates): Observable<Templates> {
     return this.http
       .put<Templates>(
-        this.apiURL + '/Templatess/' + id,
+        this.apiURL + '/templates/' + id,
         JSON.stringify(Templates),
         this.httpOptions
       )
@@ -63,7 +63,7 @@ export class TemplateService {
   // HttpClient API delete() method => Delete Templates
   deleteTemplates(id) {
     return this.http
-      .delete<Templates>(this.apiURL + '/Templatess/' + id, this.httpOptions)
+      .delete<Templates>(this.apiURL + '/templates/' + id, this.httpOptions)
       .pipe(retry(1), catchError(this.handleError));
   }
 

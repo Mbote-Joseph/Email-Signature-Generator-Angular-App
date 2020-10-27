@@ -9,7 +9,7 @@ import { retry, catchError } from 'rxjs/operators';
 })
 export class SocialService {
   // Define API
-  apiURL = 'http://localhost:3000';
+  apiURL = 'http://emailsignaturegen.herokuapp.com/v1';
 
   constructor(private http: HttpClient) {}
 
@@ -27,14 +27,14 @@ export class SocialService {
   // HttpClient API get() method => Fetch Social list
   getSocials(): Observable<Social> {
     return this.http
-      .get<Social>(this.apiURL + '/Social')
+      .get<Social>(this.apiURL + '/socials')
       .pipe(retry(1), catchError(this.handleError));
   }
 
   // HttpClient API get() method => Fetch Social
   getSocial(id): Observable<Social> {
     return this.http
-      .get<Social>(this.apiURL + '/Social/' + id)
+      .get<Social>(this.apiURL + '/socials/' + id)
       .pipe(retry(1), catchError(this.handleError));
   }
 
@@ -42,7 +42,7 @@ export class SocialService {
   createSocial(Social): Observable<Social> {
     return this.http
       .post<Social>(
-        this.apiURL + '/Social',
+        this.apiURL + '/socials',
         JSON.stringify(Social),
         this.httpOptions
       )
@@ -53,7 +53,7 @@ export class SocialService {
   updateSocial(id, Social): Observable<Social> {
     return this.http
       .put<Social>(
-        this.apiURL + '/Socials/' + id,
+        this.apiURL + '/socials/' + id,
         JSON.stringify(Social),
         this.httpOptions
       )
@@ -63,7 +63,7 @@ export class SocialService {
   // HttpClient API delete() method => Delete Social
   deleteSocial(id) {
     return this.http
-      .delete<Social>(this.apiURL + '/Social/' + id, this.httpOptions)
+      .delete<Social>(this.apiURL + '/socials/' + id, this.httpOptions)
       .pipe(retry(1), catchError(this.handleError));
   }
 
